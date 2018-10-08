@@ -1,5 +1,6 @@
 {
     "project_name": "",
+    "project_name_web": "{{ cookiecutter.project_name.lower().replace('_', '-') }}"
     "package_name": "{{ cookiecutter.project_name.lower().replace('-', '_') }}",
     "package_description": "Short Description of your project",
     "pypi_username": ""
