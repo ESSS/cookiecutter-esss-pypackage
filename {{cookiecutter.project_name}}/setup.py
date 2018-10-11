@@ -1,7 +1,6 @@
 import setuptools
 
 import io
-from setuptools import find_packages, setup
 
 with io.open("README.rst", encoding="UTF-8") as readme_file:
     readme = readme_file.read()
@@ -34,7 +33,7 @@ setuptools.setup(
     python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*",
     keywords="barril",
     name="{{ cookiecutter.project_name }}",
-    packages=find_packages(where="src"),
+    packages=setuptools.find_packages(where="src"),
     package_dir={"": "src"},
     url="http://github.com/ESSS/{{ cookiecutter.project_name }}",
     use_scm_version=True,
