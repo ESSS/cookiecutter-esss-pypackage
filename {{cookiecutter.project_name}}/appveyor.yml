@@ -2,6 +2,12 @@ skip_branch_with_pr: true
 
 environment:
   matrix:
+    - PYTHON: "C:\\Python36"
+      TOXENV: "linting"
+
+    - PYTHON: "C:\\Python36"
+      TOXENV: "docs"
+
     - PYTHON: "C:\\Python27"
       TOXENV: "py27"
 

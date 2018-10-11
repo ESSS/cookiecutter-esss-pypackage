@@ -25,4 +25,3 @@ What is {{ cookiecutter.package_name.lower().replace('_', ' ') | capitalize }}?
 ===============
 
 {{ cookiecutter.package_description }}
-
