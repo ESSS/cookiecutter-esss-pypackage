@@ -1,5 +1,5 @@
 Welcome to {{ cookiecutter.package_name | capitalize }} documentation!
-======================================
+======================================================================
 
 .. toctree::
    :maxdepth: 2

@@ -1,6 +1,6 @@
-======
+======================================================================
 {{ cookiecutter.package_name.lower().replace('_', ' ') | capitalize }}
-======
+======================================================================
 
 
 .. image:: https://img.shields.io/pypi/v/{{ cookiecutter._project_name_for_web }}.svg
@@ -21,7 +21,7 @@
 .. image:: https://img.shields.io/readthedocs/pip.svg
     :target: https://{{ cookiecutter._project_name_for_web }}.readthedocs.io/en/latest/
 
-What is {{ cookiecutter.package_name.lower().replace('_', ' ') | capitalize }}?
-===============
+What is {{ cookiecutter.package_name.lower().replace('_', ' ') | capitalize }} ?
+================================================================================
 
 {{ cookiecutter.package_description }}
