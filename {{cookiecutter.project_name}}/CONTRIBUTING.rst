@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/ESSS/{{ cookiecutter.package_name }}/issues.
+Report bugs at https://github.com/ESSS/{{ cookiecutter.project_name.lower().replace('_', '-') }}/issues.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/ESSS/{{ cookiecutter.package_name }}/issues.
+The best way to send feedback is to file an issue at https://github.com/ESSS/{{ cookiecutter.project_name.lower().replace('_', '-') }}/issues.
 
 If you are proposing a feature:
 
@@ -59,38 +59,58 @@ Get Started!
 
 Ready to contribute? Here's how to set up `{{ cookiecutter.package_name }}` for local development.
 
-1. Fork the `{{ cookiecutter.package_name }}` repo on GitHub.
-2. Clone your fork locally::
+#. Fork the `{{ cookiecutter.package_name }}` repo on GitHub.
+#. Clone your fork locally::
 
-    $ git clone git@github.com:your_github_username_here/{{ cookiecutter.package_name }}.git
+    $ git clone git@github.com:your_github_username_here/{{ cookiecutter.project_name.lower().replace('_', '-') }}.git
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+#. Create a virtual environment and activate it::
 
-    $ mkvirtualenv {{ cookiecutter.package_name }}
+    $ python -m virtualenv .env
+
+    $ .env\Scripts\activate  # For Windows
+    $ source .env/bin/activate  # For Linux
+
+#. Install the development dependencies for setting up your fork for local development::
+
     $ cd {{ cookiecutter.package_name }}/
-    $ python setup.py develop
+    $ pip install -e .[testing,docs]
 
-4. Create a branch for local development::
+   .. note::
+
+       If you use ``conda``, you can install ``virtualenv`` in the root environment::
+
+           $ conda install -n root virtualenv
+
+       Don't worry as this is safe to do.
+
+#. Install pre-commit::
+
+    $ pre-commit install
+
+#. Create a branch for local development::
 
     $ git checkout -b name-of-your-bugfix-or-feature
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass flake8 and the
-   tests::
+#. When you're done making changes, run the tests::
 
-    $ flake8 {{ cookiecutter.package_name }} tests
-    $ python setup.py test or pytest
+    $ pytest
 
-   To get flake8 and pytest, just pip install them into your virtualenv.
+#. If you want to check the modification made on the documentation, you can generate the docs locally::
 
-6. Commit your changes and push your branch to GitHub::
+    $ tox -e docs
+
+   The documentation files will be generated in ``docs/_build``.
+
+#. Commit your changes and push your branch to GitHub::
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
-7. Submit a pull request through the GitHub website.
+#. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
 -----------------------
@@ -104,4 +124,4 @@ Before you submit a pull request, check that it meets these guidelines:
 Deploying
 ---------
 
-See `HOWTORELEASE <https://github.com/ESSS/barril/blob/master/HOWTORELEASE.rst>`_.
+See `HOWTORELEASE <https://github.com/ESSS/{{ cookiecutter.project_name.lower().replace('_', '-') }}/blob/master/HOWTORELEASE.rst>`_.
