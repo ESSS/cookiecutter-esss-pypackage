@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# barril documentation build configuration file, created by
+# {{ cookiecutter.package_name }} documentation build configuration file, created by
 # sphinx-quickstart on Fri Jun  9 13:47:02 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -57,7 +57,7 @@ author = u"ESSS"
 #
 # The short X.Y version.
 # import pkg_resources
-# version = pkg_resources.get_distribution('barril').ver
+# version = pkg_resources.get_distribution('{{ cookiecutter.package_name }}').ver
 # The full version, including alpha/beta/rc tags.
 # release = version
 
@@ -149,7 +149,7 @@ texinfo_documents = [
         "{{ cookiecutter.package_name }}",
         u"{{ cookiecutter.package_name | capitalize }} Documentation",
         author,
-        "barril",
+        "{{ cookiecutter.package_name }}",
         "One line description of project.",
         "Miscellaneous",
     )

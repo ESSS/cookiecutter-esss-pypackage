@@ -25,3 +25,26 @@ What is {{ cookiecutter.package_name.lower().replace('_', ' ') | capitalize }} ?
 ================================================================================
 
 {{ cookiecutter.package_description }}
+
+
+Contributing
+------------
+
+For guidance on setting up a development environment and how to make a
+contribution to {{ cookiecutter.package_name }}, see the `contributing guidelines`_.
+
+.. _contributing guidelines: https://github.com/ESSS/{{ cookiecutter.project_name.lower().replace('_', '-') }}/blob/master/CONTRIBUTING.rst
+
+
+Release
+-------
+A reminder for the maintainers on how to make a new release.
+
+Note that the VERSION should folow the semantic versioning as X.Y.Z
+Ex.: v1.0.5
+
+1. Create a ``release-VERSION`` branch from ``upstream/master``.
+2. Update ``CHANGELOG.rst``.
+3. Push a branch with the changes.
+4. Once all builds pass, push a ``VERSION`` tag to ``upstream``.
+5. Merge the PR.
