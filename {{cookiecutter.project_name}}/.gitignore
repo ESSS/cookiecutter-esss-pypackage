@@ -13,3 +13,7 @@ dist/
 # Project settings
 .idea/
 .settings/
+
+.coverage
+.eggs/
+.tox/

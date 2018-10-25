@@ -1,5 +1,6 @@
 {
     "project_name": "",
     "package_name": "{{ cookiecutter.project_name.lower().replace('-', '_') }}",
-    "package_description": "Short Description of your project"
+    "package_description": "Short Description of your project",
+    "pypi_username": ""
 }
