@@ -1,4 +1,4 @@
-Before the start, make sure that you have an account on `PyPI`_
+Prior to the use of this cookiecutter,  make sure that you have an account on `PyPI`_
 
 
 Quickstart
@@ -10,7 +10,7 @@ Create and activate an environment for the package project.
 
 .. code-block:: bash
 
-    conda create -n <repo_name> python=<python_version>
+    conda create -n <repo_name> python=<python_version> cookiecutter
 
 Activate your environment.
 
@@ -19,12 +19,6 @@ Activate your environment.
     activate <repo_name>          #Windows
     source activate <repo_name>   #Linux
     
-Install cookiecutter.
-
-.. code-block:: bash
-
-    conda install cookiecutter
-
 
 2. Create the package
 
@@ -32,19 +26,19 @@ Use cookiecutter, informing the address of `cookiecutter-esss-pypackage`
 
 .. code-block:: bash
 
-    cookiecutter cookiecutter https://github.com/ESSS/cookiecutter-esss-pypackage
+    cookiecutter https://github.com/ESSS/cookiecutter-esss-pypackage
 
-You'll be asked to enter:
-
-- project_name
-- package_name
-- package_description
-- pypi_username
+Answer the questions in the prompt.
 
 
 3. Create a GitHub Repo
 
 Go to GitHub and create a new repository, where the name of the repository must be the same that ``[project_slug]`` from your answers to running cookiecutter. 
+
+When creating the repository, make sure to:
+- Keep __unmarked__  the option `Initialize this repository with a README`
+- Keep the option `Add .gitignore` as `None`
+- Keep the option `Add a License` as `None`
 
 After that, commit the package to GitHub:
 
@@ -63,7 +57,7 @@ Travis CI and AppVeyor are both continuous integration services configured to be
 
 Make sure to enabled both services to work with your repository.
 
-Travis CI will be also used to deploy the application to `PyPI`_ (for more details check the HOWTORELEASE.rst file).
+Travis CI will be also used to deploy the application to `PyPI`_, for more details check the section `Release` on the README file from your project.
 In order to set up this configuration, it's necessary to encrypt you PyPi password on `.travis.yml`
 
 .. code-block:: bash
@@ -82,6 +76,8 @@ Log into your account at `ReadTheDocs`_ . If you don't have one, create one and 
 Click in "My Projects" and choose the button to Import the repository and follow the directions.
 
 Now your documentation will get rebuilt when you make documentation changes to your package.
+
+Don't forget to add at least one technical leader as maintainers.
 
 .. _`ReadTheDocs`: https://readthedocs.org/
 
