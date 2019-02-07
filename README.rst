@@ -65,7 +65,7 @@ Make sure to enabled both services to work with your repository.
 2. Access https://travis-ci.org/ESSS/<package_name>
 3. Click on Activate repository
 
-4.2 Activating Appveyor:
+4.2 Activating AppVeyor:
 
 1. Open https://www.appveyor.com/ and sign in with github account
 2. On the dashboard click on `New Project`
