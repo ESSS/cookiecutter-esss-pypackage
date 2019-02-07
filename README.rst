@@ -74,10 +74,11 @@ Make sure to enabled both services to work with your repository.
 
 5. Setup deploy to PyPI
 
-Make sure to have an account on `PyPI`_ 
-
 Travis CI will be also used to deploy the application to `PyPI`_, for more details check the section ``Release`` on the README file from your project.
 In order to set up this configuration, it's necessary to encrypt you `PyPI`_ password on ``.travis.yml``
+
+Make sure that you have the ``Travis command line client`` installed. 
+`Instructions on how to install the travis command line client`_ 
 
 Run the commands below on the root directory of your project.
 
@@ -94,7 +95,7 @@ Run the commands below on the root directory of your project.
 
 The command line from ``travis`` will create a new entry called "Deploy" on your ``.travis.yml``  file. 
 
-.. code-block:: python
+.. code-block:: yaml
 
       deploy:
         provider: pypi
@@ -119,7 +120,7 @@ Copy the ``<encrypted password>`` and replace the ``REPLACE`` text with the encr
 
 Do not forget to delete the deploy and password newly created tags
 
-.. code-block:: python
+.. code-block:: yaml
 
       deploy:
         provider: pypi
@@ -136,12 +137,15 @@ Do not forget to delete the deploy and password newly created tags
     - master
     - "/v(\\d+\\.)*\\d/"
 
+The project will only be available at PyPI after the first release, for more details on how to make a release check the section ``Release`` on the README file from your project.
+
+**Don't forget to add at least one technical leader as maintainers.**
 
 6. Set Up ReadTheDocs
 
 `ReadTheDocs`_ hosts documentation for the open source community.
 
-1. Log into your account at `ReadTheDocs`_ . If you don't have one, create one and log into it.
+1. Log into your account at `ReadTheDocs`_ 
 2. Click in "My Projects" and choose the button to Import the repository 
 3. Click on import manualy 
 4. Activate the `ReadTheDocs`  to work with github.
@@ -178,6 +182,6 @@ Don't forget to add at least one technical leader as maintainers.
 
 .. _`PyPI`: https://pypi.python.org/pypi
 .. _`PyPI Help`: http://peterdowns.com/posts/first-time-with-pypi.html
-
+.. _`Instructions on how to install the travis command line client`: https://github.com/travis-ci/travis.rb#installation
 
 
