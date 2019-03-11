@@ -30,7 +30,7 @@ setuptools.setup(
     license="MIT license",
     long_description=readme + "\n\n" + history,
     include_package_data=True,
-    python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*",
+    python_requires=">=3.6",
     keywords="{{ cookiecutter.package_name }}",
     name="{{ cookiecutter.project_name }}",
     packages=setuptools.find_packages(where="src"),

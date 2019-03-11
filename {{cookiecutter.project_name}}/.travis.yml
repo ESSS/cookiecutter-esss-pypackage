@@ -20,9 +20,6 @@ jobs:
     - python: '3.6'
       env: TOXENV=docs
 
-    - python: '2.7'
-      env: TOXENV=py27
-
     - python: '3.6'
       env: TOXENV=py36
 
@@ -32,7 +29,7 @@ jobs:
       dist: xenial
 
     - stage: deploy
-      python: '3.6'
+      python: '3.7'
       env:
       install: pip install -U setuptools setuptools_scm
       script: skip
@@ -47,7 +44,7 @@ jobs:
         on:
           tags: true
           repo: ESSS/{{ cookiecutter.package_name }}
-          python: 3.6
+          python: '3.7'
 
 branches:
   only:
