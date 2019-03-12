@@ -10,7 +10,7 @@
     :target: https://pypi.org/project/{{ cookiecutter.project_name.lower().replace('_', '-') }}
 
 .. image:: https://img.shields.io/travis/ESSS/{{ cookiecutter.project_name.lower().replace('_', '-') }}.svg
-    :target: https://travis-ci.org/ESSS/{{ cookiecutter.project_name.lower().replace('_', '-') }}
+    :target: https://travis-ci.com/ESSS/{{ cookiecutter.project_name.lower().replace('_', '-') }}
 
 .. image:: https://ci.appveyor.com/api/projects/status/github/ESSS/{{ cookiecutter.project_name.lower().replace('_', '-') }}?branch=master
     :target: https://ci.appveyor.com/project/ESSS/{{ cookiecutter.project_name.lower().replace('_', '-') }}/?branch=master&svg=true
