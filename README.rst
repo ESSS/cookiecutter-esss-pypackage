@@ -82,7 +82,26 @@ Travis CI will be also used to deploy the application to `PyPI`_, for more detai
 In order to set up this configuration, it's necessary to encrypt you `PyPI`_ password on ``.travis.yml``
 
 Make sure that you have the ``Travis command line client`` installed. 
-`Instructions on how to install the travis command line client`_ 
+
+
+5.1 Instruction to install travis-cli
+................................................
+
+You need to have at least the ruby version 1.9.3 installed in your machine.
+
+.. code-block:: bash
+   
+   Win:
+   choco install ruby
+   
+   Linux
+   apt install ruby
+   
+Using the package manager from ruby you can install de travis-cli tool
+
+.. code-block:: bash
+   
+    gem install travis 
 
 Run the commands below on the root directory of your project.
 
