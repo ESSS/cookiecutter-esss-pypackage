@@ -3,7 +3,7 @@ language: python
 stages:
 - test
 - name: deploy
-  if: repo = ESSS/{{ cookiecutter.package_name }} AND tag IS present
+  if: repo = ESSS/{{ cookiecutter.project_name }} AND tag IS present
 
 install:
 - pip install -U pip
@@ -45,7 +45,7 @@ jobs:
           secure: REPLACE
         on:
           tags: true
-          repo: ESSS/{{ cookiecutter.package_name }}
+          repo: ESSS/{{ cookiecutter.project_name }}
           python: '3.7'
 
 branches:
