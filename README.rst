@@ -107,7 +107,7 @@ Run the commands below on the root directory of your project.
 
 .. code-block:: bash
 
-      1) travis encrypt --add deploy.password
+      1) travis encrypt --com --add deploy.password
       2) Type your PyPI password
       
       On Linux:
