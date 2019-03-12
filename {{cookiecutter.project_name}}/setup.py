@@ -5,7 +5,7 @@ import io
 with io.open("README.rst", encoding="UTF-8") as readme_file:
     readme = readme_file.read()
 
-with io.open("CHANGELOG.RST", encoding="UTF-8") as changelog_file:
+with io.open("CHANGELOG.rst", encoding="UTF-8") as changelog_file:
     history = changelog_file.read()
 
 requirements = []
